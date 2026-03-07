@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio out</title>
+    <link rel="stylesheet" href="https://unpkg.com/open-props"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.7/bundles/datastar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js"></script>
+    <script src="./js/config_mathjax.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="./js/app.js" type="module"></script>
+  </head>
+  <body>
+    <div style="display: flex; gap: var(--size-fluid-2); margin-bottom: var(--size-fluid-3);">
+      <button id="john_tan" data-on:click="@get('/config/john_tan')">John Tan</button>
+      <div id="john_tan_config">
+      </div>
+    </div>
+    <h1>Text prompt, audio response</h1>
+
+    <div style="display: flex; gap: var(--size-fluid-2); margin-bottom: var(--size-fluid-3);">
+      <div>
+        <label for="connected">Connected</label>
+        <input type="checkbox" id="connected" disabled/>
+      </div>
+      <div>
+        <button data-on:click="wsconnect()" class="highlight">Reconnect</button>
+        Reconnecting preserves your session. Reloading the browser creates a new session.
+      </div>
+    </div>
+    
+    <div style="margin-bottom: var(--size-fluid-3)">
+      <button data-on:click="enableAudio()" class="highlight">Enable Audio</button> 
+      For safety, browsers require users to manually enable audio.
+    </div>
+    
+    <div style="display: flex; gap: var(--size-fluid-3)">
+      <button data-on:click="sendMessage('Why is the sky blue?')">Why Sky Blue?</button>
+      <button data-on:click="sendMessage('What is the value of Pi?')">Value of Pi?</button>
+    </div>
+
+    <div style="display: flex; gap: var(--size-fluid-2); margin-top: var(--size-fluid-3)">
+      prompt:<textarea id="prompt" rows="3" cols="33" name="prompt" required/></textarea>
+      <button data-on:click="const ta=document.getElementById('prompt'); sendMessage(ta.value)" style="height: fit-content" >
+        Send
+      </button>
+        <div id="workingindicator"></div>
+    </div>
+
+    <div id="agentresponse" style="margin-top: var(--size-fluid-3)"></div>
+
+  </body>
+</html>
