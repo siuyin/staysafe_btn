@@ -9,7 +9,7 @@ config_db["john_tan"] = {
     "emergency_contact_name": "Mrs. Emily Tan",
     "home_address": "Lost House, 55 Newton Rd, Singapore 307987",
     "preferred_language": "English",
-    "get_me_home_lbl": "Get Me Home",
+    "get_me_home_label": "Get Me Home",
     "get_me_home_enabled": True,
     "get_me_home_template": "Please call me a Grab car. I am at address: 1010 Dover Rd, Singapore 139658 going to HOME_ADDRESS. Include the pickup point (not the pickup address) and destination in your response. Respond in PREFERRED_LANGUAGE.",
     "medical_emergency_label": "Ambulance",
@@ -18,6 +18,9 @@ config_db["john_tan"] = {
     "blood_type": "B+",
     "talk_to_someone_lbl": "I need to talk to someone",
     "talk_to_someone_enabled": True,
+    "no_motion_detected_label": "No Motion Detected",
+    "no_motion_detected_enabled": True,
+    "no_motion_detected_template": "Your phone has reported no motion for the llast 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [no motion detected for 12 hours] in your response"
 }
 
 config_db["manikam"] = {
@@ -28,7 +31,7 @@ config_db["manikam"] = {
     "emergency_contact_name": "Sofia (office hour only)",
     "home_address": "15 South Buona Vista Rd, Singapore 118146",
     "preferred_language": "Tamil",
-    "get_me_home_lbl": "வீடு",
+    "get_me_home_label": "வீடு",
     "get_me_home_enabled": True,
     "get_me_home_template": "Please call me a Grab car. I am at address: 11 Eunos Rd 8, Singapore 408601 going to HOME_ADDRESS. Include  the pickup point (not the pickup address) and destination in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
     "medical_emergency_label": "அவசர ஊர்தி",
@@ -37,6 +40,9 @@ config_db["manikam"] = {
     "blood_type": "A+",
     "talk_to_someone_lbl": "I need to talk to someone",
     "talk_to_someone_enabled": True,
+    "no_motion_detected_label": "No Motion Detected",
+    "no_motion_detected_enabled": True,
+    "no_motion_detected_template": "Your phone has reported no motion for the llast 12 hours, Please Call Ambulance on Phone number 995 let them know my current location at 910 Upper Thomson Rd, Singapore 787112 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English."
 }
 
 config_db["hafiz_salleh"] = {
@@ -47,7 +53,7 @@ config_db["hafiz_salleh"] = {
     "emergency_contact_name": "Abu Salleh and Monica",
     "home_address": "88 Geylang Bahru, Singapore 339696",
     "preferred_language": "Malay",
-    "get_me_home_lbl": "Pulang Rumah",
+    "get_me_home_label": "Pulang Rumah",
     "get_me_home_enabled": True,
     "get_me_home_template": "I am an 11 year old special needs student and i am lost. Please call my emergency contacts: EMERGENCY_CONTACT_NAME their phone numbers are EMERGENCY_CONTACT_NO so they can pick me up. I am at address: 11 Eunos Rd 8, Singapore 408601 going to HOME_ADDRESS. Be sure to inlcude the parents reply in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
     "medical_emergency_label": "Ambulans",
@@ -56,6 +62,9 @@ config_db["hafiz_salleh"] = {
     "blood_type": "O+",
     "talk_to_someone_lbl": "I need to talk to someone",
     "talk_to_someone_enabled": True,
+    "no_motion_detected_label": "No Motion Detected",
+    "no_motion_detected_enabled": True,
+    "no_motion_detected_template": "Your phone has reported no motion for the llast 12 hours, Please Call Ambulance on Phone number 995 let them know my current location at 80 Mandai Lake Rd, Mandai Wildlife Reserve, Singapore 729826 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contacts: EMERGENCY_CONTACT_NAME and their numbers: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English."
 }
 
 
