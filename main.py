@@ -107,9 +107,12 @@ async def getConfig(user_id: str):
         print(f"{user_id} not found")
         
     config = config_db[user_id]
+
+    display_keys = ["name", "age", "living_situation", "emergency_contact_name", "emergency_contact_no", "home_address", "preferred_language", "blood_type"]
+    rows = "".join(f"<tr><td><b>{k}</b></td><td>{config[k]}</td></tr>" for k in display_keys if k in config)
     
     yield sse.patch_elements(
-        f"""<div id="{user_id}_config">{config}</div>"""
+        f"""<div id="{user_id}_config"><table style="border-collapse:collapse;"><tbody>{rows}</tbody></table></div>"""
     )
     
     button_labels = ["get_me_home", "medical_emergency", "no_motion_detected", "continuous_charging", "continuous_discharging"]
