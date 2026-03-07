@@ -110,7 +110,7 @@ async def getConfig(user_id: str):
     print(tmpl)
     print(f"configuration for {user_id}: {config}")
     yield sse.patch_elements(f"""<div id="{user_id}_config">{config}</div>
-                             <button id="get_me_home_btn" data-on:click="sendMessage('{tmpl}')">Get Me Home</button>
+                             <button id="get_me_home_btn" data-on:click="sendMessage('{tmpl}')">{config['get_me_home_lbl']}</button>
                              """)
 
 
