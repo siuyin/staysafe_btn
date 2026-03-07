@@ -250,7 +250,30 @@ function handleADKEvent(adkEvent, playerNode) {
   return ret;
 }
 
+let selectedUser = null;
+
+function selectUser(userId) {
+  const allUsers = ["john_tan", "chen_ah_niu", "hafiz_salleh", "manikam"];
+  const wrapper = document.getElementById(userId + "_wrapper");
+  if (selectedUser === userId) {
+    wrapper.classList.add("collapsed");
+    selectedUser = null;
+    return;
+  }
+
+  for (const u of allUsers) {
+    document.getElementById(u + "_wrapper").classList.add("collapsed");
+  }
+
+  wrapper.classList.remove("collapsed");
+  selectedUser = userId;
+}
+
 async function sendMessage(msg) {
+  if (!selectedUser) {
+    alert("Please select a user first.");
+    return;
+  }
   workingindicator(true);
   await socket.send(JSON.stringify({ type: "text", text: msg }));
   console.log(`sent ${msg}`);
@@ -270,3 +293,4 @@ function workingindicator(state) {
 window.enableAudio = enableAudio;
 window.wsconnect = wsconnect;
 window.sendMessage = sendMessage;
+window.selectUser = selectUser;

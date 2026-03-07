@@ -14,6 +14,10 @@ button.highlight {
   color: var(--yellow-12);
 }
 
+.collapsed {
+  display: none;
+}
+
 button.action {
   border-color: var(--blue-1);
   background-color: var(--blue-3);
