@@ -15,7 +15,7 @@ from google.adk.agents.live_request_queue import LiveRequestQueue
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 
-from config_db import config_db
+from config_db import config_db, update_template
 
 from websocket_funcs import (
     audio_run_config,
@@ -106,8 +106,12 @@ async def getConfig(user_id: str):
         )
         print(f"{user_id} not found")
     config = config_db[user_id]
+    tmpl = update_template(config)
+    print(tmpl)
     print(f"configuration for {user_id}: {config}")
-    yield sse.patch_elements(f"""<div id="{user_id}_config">{config}</div>""")
+    yield sse.patch_elements(f"""<div id="{user_id}_config">{config}</div>
+                             <button id="get_me_home_btn" data-on:click="sendMessage('{tmpl}')">Get Me Home</button>
+                             """)
 
 
 @app.get("/config/{user_id}", response_class=StreamingResponse)
