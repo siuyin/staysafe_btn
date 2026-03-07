@@ -14,6 +14,8 @@ def call_phone(number: str, msg: str) -> dict:
         return {"status": "success", "reply": "thank you for calling i will meet her in the hospital in about 25 minutes."}
     if ("+65 3243 6544" in number) or ("+65 0982 1239" in number):
         return {"status": "success", "reply": "thank you we will pick up our son, let him know we will be there in about 15 minutes."}
+    if number == "+65 6457 1089":
+        return {"status": "success", "reply": "thank you for calling i will meet her in the hospital in about 15 minutes."}
 
 
 def call_grab_car(pickup_address: str, destination_address) -> dict:

@@ -122,7 +122,7 @@ async def getConfig(user_id: str):
                              """)
         if label == "medical_emergency":
             yield sse.patch_elements(f"""
-                                     <button id="medical_emergency_btn" class="action" data-on:click="sendMessage('{tmpl}')">{config['medical_emergency_label']}</button>
+                                     <button id="medical_emergency_btn" class="action_emergency" data-on:click="sendMessage('{tmpl}')">{config['medical_emergency_label']}</button>
                              """)
         if label == "no_motion_detected":
             yield sse.patch_elements(f"""
