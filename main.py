@@ -112,7 +112,7 @@ async def getConfig(user_id: str):
         f"""<div id="{user_id}_config">{config}</div>"""
     )
     
-    button_labels = ["get_me_home", "medical_emergency", "no_motion_detected"]
+    button_labels = ["get_me_home", "medical_emergency", "no_motion_detected", "continuous_charging", "continuous_discharging"]
     
     for label in button_labels:
         tmpl = update_template(config, label)
@@ -127,6 +127,14 @@ async def getConfig(user_id: str):
         if label == "no_motion_detected":
             yield sse.patch_elements(f"""
                                      <button id="no_motion_detected_btn" data-on:click="sendMessage('{tmpl}')">{config['no_motion_detected_label']}</button>
+                             """)
+        if label == "continuous_charging":
+            yield sse.patch_elements(f"""
+                                     <button id="continuous_charging_btn" data-on:click="sendMessage('{tmpl}')">{config['continuous_charging_label']}</button>
+                             """)
+        if label == "continuous_discharging":
+            yield sse.patch_elements(f"""
+                                     <button id="continuous_discharging_btn" data-on:click="sendMessage('{tmpl}')">{config['continuous_discharging_label']}</button>
                              """)
             
         print(tmpl)

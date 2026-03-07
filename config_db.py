@@ -20,7 +20,13 @@ config_db["john_tan"] = {
     "talk_to_someone_enabled": True,
     "no_motion_detected_label": "No Motion Detected",
     "no_motion_detected_enabled": True,
-    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [no motion detected for 12 hours] in your response"
+    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [no motion detected for 12 hours] in your response.",
+    "continuous_charging_label": "Continuous Charging",
+    "continuous_charging_enabled": True,
+    "continuous_charging_template": "Your phone has reported continuous charging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous charging detected for 12 hours] in your response.",
+    "continuous_discharging_label": "Continuous Discharging",
+    "continuous_discharging_enabled": True,
+    "continuous_discharging_template": "Your phone has reported continuous discharging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous discharging detected for 12 hours] in your response."
 }
 
 config_db["manikam"] = {
@@ -42,7 +48,13 @@ config_db["manikam"] = {
     "talk_to_someone_enabled": True,
     "no_motion_detected_label": "No Motion Detected",
     "no_motion_detected_enabled": True,
-    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please Call Ambulance on Phone number 995 let them know my current location at 910 Upper Thomson Rd, Singapore 787112 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English."
+    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [no motion detected for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "continuous_charging_label": "Continuous Charging",
+    "continuous_charging_enabled": True,
+    "continuous_charging_template": "Your phone has reported continuous charging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous charging detected for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "continuous_discharging_label": "Continuous Discharging",
+    "continuous_discharging_enabled": True,
+    "continuous_discharging_template": "Your phone has reported continuous discharging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous discharging detected for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English."
 }
 
 config_db["hafiz_salleh"] = {
@@ -64,7 +76,13 @@ config_db["hafiz_salleh"] = {
     "talk_to_someone_enabled": True,
     "no_motion_detected_label": "No Motion Detected",
     "no_motion_detected_enabled": True,
-    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please Call Ambulance on Phone number 995 let them know my current location at 80 Mandai Lake Rd, Mandai Wildlife Reserve, Singapore 729826 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contacts: EMERGENCY_CONTACT_NAME and their numbers: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English."
+    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please Call Ambulance on Phone number 995 let them know my current location at 80 Mandai Lake Rd, Mandai Wildlife Reserve, Singapore 729826 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contacts: EMERGENCY_CONTACT_NAME and their numbers: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "continuous_charging_label": "Continuous Charging",
+    "continuous_charging_enabled": True,
+    "continuous_charging_template": "Your phone has reported continuous charging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous charging detected for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "continuous_discharging_label": "Continuous Discharging",
+    "continuous_discharging_enabled": True,
+    "continuous_discharging_template": "Your phone has reported continuous discharging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous discharging detected for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English."
 }
 
 config_db["chen_ah_niu"] = {
@@ -86,7 +104,13 @@ config_db["chen_ah_niu"] = {
     "talk_to_someone_enabled": True,
     "no_motion_detected_label": "No Motion Detected",
     "no_motion_detected_enabled": True,
-    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please Call Ambulance on Phone number 995 let them know my current location at 910 Upper Thomson Rd, Singapore 787112 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English."
+    "no_motion_detected_template": "Your phone has reported no motion for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [no motion detected for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "continuous_charging_label": "Continuous Charging",
+    "continuous_charging_enabled": True,
+    "continuous_charging_template": "Your phone has reported continuous charging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous charging detected for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "continuous_discharging_label": "Continuous Discharging",
+    "continuous_discharging_enabled": True,
+    "continuous_discharging_template": "Your phone has reported continuous discharging for the last 12 hours, Please call Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Be sure to include [continuous discharging for 12 hours] in your response. Respond in PREFERRED_LANGUAGE then repeat in English."
 }
 
 
