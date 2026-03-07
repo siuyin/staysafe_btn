@@ -106,12 +106,24 @@ async def getConfig(user_id: str):
         )
         print(f"{user_id} not found")
     config = config_db[user_id]
-    tmpl = update_template(config)
-    print(tmpl)
-    print(f"configuration for {user_id}: {config}")
-    yield sse.patch_elements(f"""<div id="{user_id}_config">{config}</div>
-                             <button id="get_me_home_btn" data-on:click="sendMessage('{tmpl}')">{config['get_me_home_lbl']}</button>
+    
+    button_labels = ["get_me_home", "medical_emergency"]
+    
+    final_button= ""
+    for label in button_labels:
+        tmpl = update_template(config, label)
+        if label == "get_me_home":
+            yield sse.patch_elements(f"""
+                                     <button id="get_me_home_btn" class="action" data-on:click="sendMessage('{tmpl}')">{config['get_me_home_lbl']}</button>
                              """)
+        if label == "medical_emergency":
+            yield sse.patch_elements(f"""
+                                     <button id="medical_emergency_btn" class="action" data-on:click="sendMessage('{tmpl}')">{config['medical_emergency_label']}</button>
+                             """)
+        print(tmpl)
+        print(f"configuration for {user_id}: {config}")
+        
+    yield sse.patch_elements(final_button)
 
 
 @app.get("/config/{user_id}", response_class=StreamingResponse)

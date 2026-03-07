@@ -11,7 +11,11 @@ config_db["john_tan"] = {
     "preferred_language": "English",
     "get_me_home_lbl": "Get Me Home",
     "get_me_home_enabled": True,
-    "get_me_home_template": "Please call me a Grab car. I am at address: 1010 Dover Rd, Singapore 139658 going to HOME_ADDRESS. Include  the pickup point (not the pickup address) and destination in your response. Respond in PREFERRED_LANGUAGE.",
+    "get_me_home_template": "Please call me a Grab car. I am at address: 1010 Dover Rd, Singapore 139658 going to HOME_ADDRESS. Include the pickup point (not the pickup address) and destination in your response. Respond in PREFERRED_LANGUAGE.",
+    "medical_emergency_label": "Ambulance",
+    "medical_emergency_enable": True,
+    "medical_emergency_template": "Call Ambulance on Phone number 995 let them know my current location at 930 Yishun Ave 2, Singapore 769098 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me.",
+    "blood_type": "B+",
     "talk_to_someone_lbl": "I need to talk to someone",
     "talk_to_someone_enabled": True,
 }
@@ -27,6 +31,10 @@ config_db["manikam"] = {
     "get_me_home_lbl": "வீடு",
     "get_me_home_enabled": True,
     "get_me_home_template": "Please call me a Grab car. I am at address: 11 Eunos Rd 8, Singapore 408601 going to HOME_ADDRESS. Include  the pickup point (not the pickup address) and destination in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "medical_emergency_label": "அவசர ஊர்தி",
+    "medical_emergency_enable": True,
+    "medical_emergency_template": "Call Ambulance on Phone number 995 let them know my current location at 910 Upper Thomson Rd, Singapore 787112 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contact: EMERGENCY_CONTACT_NAME and their phone number: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "blood_type": "A+",
     "talk_to_someone_lbl": "I need to talk to someone",
     "talk_to_someone_enabled": True,
 }
@@ -41,16 +49,25 @@ config_db["hafiz_salleh"] = {
     "preferred_language": "Malay",
     "get_me_home_lbl": "Pulang Rumah",
     "get_me_home_enabled": True,
-    "get_me_home_template": "I am an 11 year old special needs student and i am lost. Please call my parents: EMERGENCY_CONTACT_NAME their phone numbers are EMERGENCY_CONTACT_NO so they can pick me up. I am at address: 11 Eunos Rd 8, Singapore 408601 going to HOME_ADDRESS. Be sure to inlcude the parents reply in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "get_me_home_template": "I am an 11 year old special needs student and i am lost. Please call my emergency contacts: EMERGENCY_CONTACT_NAME their phone numbers are EMERGENCY_CONTACT_NO so they can pick me up. I am at address: 11 Eunos Rd 8, Singapore 408601 going to HOME_ADDRESS. Be sure to inlcude the parents reply in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "medical_emergency_label": "Ambulans",
+    "medical_emergency_enable": True,
+    "medical_emergency_template": "Call Ambulance on Phone number 995 let them know my current location at 80 Mandai Lake Rd, Mandai Wildlife Reserve, Singapore 729826 and my blood type: BLOOD_TYPE, also let them know i am: LIVING_SITUATION. Secondly also call my emergency contacts: EMERGENCY_CONTACT_NAME and their numbers: EMERGENCY_CONTACT_NO and let them know where the ambulance is taking me. Respond in PREFERRED_LANGUAGE then repeat in English.",
+    "blood_type": "O+",
     "talk_to_someone_lbl": "I need to talk to someone",
     "talk_to_someone_enabled": True,
 }
 
 
-def update_template(user_info: dict) -> str:
-    tmpl = user_info['get_me_home_template']
+def update_template(user_info: dict, button_lbl: str) -> str:
+    key = button_lbl + "_template"
+    tmpl = user_info[key]
+    
     tmpl = tmpl.replace('HOME_ADDRESS', user_info['home_address'])
     tmpl = tmpl.replace('PREFERRED_LANGUAGE', user_info['preferred_language'])
     tmpl = tmpl.replace('EMERGENCY_CONTACT_NAME', user_info['emergency_contact_name'])
     tmpl = tmpl.replace('EMERGENCY_CONTACT_NO', user_info['emergency_contact_no'])
+    tmpl = tmpl.replace('BLOOD_TYPE', user_info['blood_type'])
+    tmpl = tmpl.replace('LIVING_SITUATION', user_info['living_situation'])
+
     return tmpl

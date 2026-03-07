@@ -13,6 +13,8 @@
     <script src="./js/app.js" type="module"></script>
   </head>
   <body>
+    <h2>Configuration:</h2>
+    
     <div style="display: flex; gap: var(--size-fluid-2); margin-bottom: var(--size-fluid-1);">
       <button id="john_tan" data-on:click="@get('/config/john_tan')">John Tan</button>
       <div id="john_tan_config">
@@ -31,7 +33,7 @@
       </div>
     </div>
 
-    <h1>Stay Safe</h1>
+    <h2>Infrastructure Setup</h2>
 
     <div style="display: flex; gap: var(--size-fluid-2); margin-bottom: var(--size-fluid-3);">
       <div>
@@ -48,12 +50,32 @@
       <button data-on:click="enableAudio()" class="highlight">Enable Audio</button> 
       For safety, browsers require users to manually enable audio.
     </div>
+
+    <h2 style="margin-bottom: var(--size-0)">Sensor Simulations</h2>
+    <p style="margin-top: var(--size-0)">When deployed on mobile phone, phone sensors used</p> 
+
+    <h2 style="margin-bottom: var(--size-0)">Emergency situation simulations</h2>
+    <p style="margin-top: var(--size-0)">Conditions checked periodically and triggered when conditions met.</p> 
+
+    <div style="display: flex; gap: var(--size-fluid-1)">
+      <button>Continuous Charging</button>
+      <button>Continuous Discharging</button>
+      <button>No Motion detected</button>
+
+    </div>
+
+    <hr>
+
+    <h1>Stay Safe</h1>
     
     <div style="display: flex; gap: var(--size-fluid-3)">
-      <button data-on:click="sendMessage('Why is the sky blue?')">Why Sky Blue?</button>
-      <button data-on:click="sendMessage('What is the value of Pi?')">Value of Pi?</button>
-      <button id="get_me_home_btn">Get Me Home</button>
+      <button id="get_me_home_btn" class="action">Get Me Home</button>
+      <button id="medical_emergency_btn" class="action">Medical Emergency</button>
     </div>
+
+    <hr>
+
+    <h2>Debug and Test</h2>
 
     <div style="display: flex; gap: var(--size-fluid-2); margin-top: var(--size-fluid-3)">
       prompt:<textarea id="prompt" rows="3" cols="33" name="prompt" required/></textarea>

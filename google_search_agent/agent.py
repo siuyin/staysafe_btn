@@ -6,7 +6,14 @@ from google.adk.tools import google_search
 
 def call_phone(number: str, msg: str) -> dict:
     print(f"calling {number} with {msg}")
-    return {"status": "success", "reply": "thank you we will pick up our son, let him know we will be there in about 15 minutes"}
+    if number == '995':
+        return {"status": "success", "reply": "we are taking him to Woodlands Hospital."}
+    if number == "+65 1234 5678":
+        return {"status": "success", "reply": "thank you for calling i will meet him in the hospital in about 20 minutes."}
+    if number == "+65 0873 3452":
+        return {"status": "success", "reply": "thank you for calling i will meet her in the hospital in about 25 minutes."}
+    if ("+65 3243 6544" in number) or ("+65 0982 1239" in number):
+        return {"status": "success", "reply": "thank you we will pick up our son, let him know we will be there in about 15 minutes."}
 
 
 def call_grab_car(pickup_address: str, destination_address) -> dict:
