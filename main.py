@@ -14,8 +14,10 @@ from fastapi.staticfiles import StaticFiles
 from google.adk.agents.live_request_queue import LiveRequestQueue
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
+from datetime import datetime
 
 from config_db import config_db, update_template
+from sensors_simulation import sensors_report_db
 
 from websocket_funcs import (
     audio_run_config,
@@ -147,6 +149,35 @@ async def getConfig(user_id: str):
 @app.get("/config/{user_id}", response_class=StreamingResponse)
 async def show_config(user_id: str):
     return DatastarResponse(getConfig(user_id))
+
+
+async def sensors_simulation(report_id: str):
+    report = sensors_report_db[report_id]
+    last_key = f"last_{report_id}_timestamp"
+    report[last_key] = report["current_timestamp"]
+    report["current_timestamp"] = datetime.now()
+
+    current = report["current_timestamp"]
+    last = report[last_key]
+    current_str = current.strftime("%Y-%m-%d %H:%M:%S")
+
+    if last:
+        last_str = last.strftime("%Y-%m-%d %H:%M:%S")
+        interval_str = f"{int((current - last).total_seconds())}s"
+    else:
+        last_str = "-"
+        interval_str = "-"
+
+    yield sse.patch_elements(f"""<div id="{report_id}_report">
+        current: {current_str}<br>
+        last: {last_str}<br>
+        interval: {interval_str}
+    </div>""")
+
+
+@app.post("/sensors/{report_id}")
+async def show_sensors_simulation_report(report_id: str):
+    return DatastarResponse(sensors_simulation(report_id))
 
 
 static_dir = Path(__file__).parent / "static"
