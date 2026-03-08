@@ -32,6 +32,13 @@ button.action_emergency {
   font-size: var(--font-size-fluid-1);
 }
 
+div.config {
+  display: flex;
+  gap: var(--size-fluid-2);
+  margin-bottom: var(--size-fluid-1);
+  align-items: flex-start;
+}
+
 .spinner {
   border: 8px solid #f3f3f3;
   border-radius: 50%;
