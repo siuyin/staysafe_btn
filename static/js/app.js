@@ -274,6 +274,7 @@ async function sendMessage(msg) {
     alert("Please select a user first.");
     return;
   }
+  audioContext.resume();
   workingindicator(true);
   await socket.send(JSON.stringify({ type: "text", text: msg }));
   console.log(`sent ${msg}`);
