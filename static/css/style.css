@@ -1,5 +1,16 @@
+@import "https://unpkg.com/open-props";
+
+@font-face {
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Noto Sans Tamil", sans-serif;
   font-size: var(--font-size-fluid-0);
   margin-left: var(--size-fluid-4);
 }
@@ -19,6 +30,7 @@ button.highlight {
 }
 
 button.action {
+  font-family: "Noto Sans Tamil", sans-serif;
   border-color: var(--blue-1);
   background-color: var(--blue-3);
   color: var(--blue-12);
@@ -26,6 +38,7 @@ button.action {
 }
 
 button.action_emergency {
+  font-family: "Noto Sans Tamil", sans-serif;
   border-color: var(--orange-3);
   background-color: var(--orange-5);
   color: var(--orange-12);

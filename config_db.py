@@ -37,7 +37,7 @@ config_db["manikam"] = {
     "emergency_contact_name": "Sofia (office hour only)",
     "home_address": "15 South Buona Vista Rd, Singapore 118146",
     "preferred_language": "Tamil",
-    "get_me_home_label": "என்னை வீட்டிற்கு அழைத்து வா.",
+    "get_me_home_label": "வீடு",
     "get_me_home_enabled": True,
     "get_me_home_template": "Please call me a Grab car. I am at address: 11 Eunos Rd 8, Singapore 408601 going to HOME_ADDRESS. Include  the pickup point (not the pickup address) and destination in your response. Respond in PREFERRED_LANGUAGE then repeat in English.",
     "medical_emergency_label": "அவசர ஊர்தி",
