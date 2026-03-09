@@ -106,7 +106,10 @@
     <div style="display: flex; gap: var(--size-fluid-3)">
       <button style="margin-right: var(--size-8)" id="get_me_home_btn" class="action">Get Me Home</button>
       <button style="margin-left: var(--size-8)" id="medical_emergency_btn" class="action_emergency">Medical Emergency</button>
+      <div id="workingindicator"></div>
     </div>
+
+    <div id="agentresponse" style="margin-top: var(--size-fluid-3)"></div>
 
     <hr>
 
@@ -117,10 +120,7 @@
       <button data-on:click="const ta=document.getElementById('prompt'); sendMessage(ta.value)" style="height: fit-content" >
         Send
       </button>
-        <div id="workingindicator"></div>
     </div>
-
-    <div id="agentresponse" style="margin-top: var(--size-fluid-3)"></div>
 
   </body>
 </html>
