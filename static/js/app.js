@@ -193,9 +193,6 @@ function showOutputTranscription(adkEvent) {
 
 async function handleTurnComplete() {
   const tgt = document.getElementById("agentresponse");
-  const hr = document.createElement("hr");
-  hr.classList.add("response-sep");
-  tgt.append(hr);
   const md = marked.parse(tgt.innerHTML);
   const sanitized = DOMPurify.sanitize(md);
   tgt.innerHTML = sanitized;
@@ -270,6 +267,13 @@ function selectUser(userId) {
   selectedUser = userId;
 }
 
+function addResponseSep() {
+  const tgt = document.getElementById("agentresponse");
+  const hr = document.createElement("hr");
+  hr.classList.add("response-sep");
+  tgt.append(hr);
+}
+
 async function sendMessage(msg) {
   if (!selectedUser) {
     alert("Please select a user first.");
@@ -277,6 +281,7 @@ async function sendMessage(msg) {
   }
   audioContext.resume();
   workingindicator(true);
+  addResponseSep();
   await socket.send(JSON.stringify({ type: "text", text: msg }));
   console.log(`sent ${msg}`);
 }
