@@ -194,6 +194,7 @@ function showOutputTranscription(adkEvent) {
 async function handleTurnComplete() {
   const tgt = document.getElementById("agentresponse");
   const hr = document.createElement("hr");
+  hr.classList.add("response-sep");
   tgt.append(hr);
   const md = marked.parse(tgt.innerHTML);
   const sanitized = DOMPurify.sanitize(md);
